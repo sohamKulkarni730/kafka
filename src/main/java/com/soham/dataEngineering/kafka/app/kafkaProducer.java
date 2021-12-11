@@ -23,13 +23,13 @@ public class kafkaProducer
 
         Producer producer = new KafkaProducer(props) ;
 
-        System.out.println("it has started bitch");
-        for (int i=0 ; i<5000 ; i++)
-        {    System.out.println("it is going bitch");
-            producer.send(new ProducerRecord("first_topic", "soham is sending messages to Kafka bitch  "+i));
+        System.out.println("it has started ");
+        for (int i=0 ; i<100 ; i++)
+        {
+            producer.send(new ProducerRecord("first_topic", "soham is sending messages to Kafka   "+i));
             producer.flush();
         }
-        System.out.println("it done bitch");
+        System.out.println("it done ");
         producer.close();
     }
 }
